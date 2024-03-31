@@ -1,0 +1,1160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: radial-gradient(rgb(28, 27, 27), rgb(15, 14, 14));
+  margin: 0;
+  padding: 0 0px 20px 0px;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background: black;
+  color: white;
+  align-items: start;
+  padding: 5px 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  right: 0;
+  /* height: fit-content; */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.left-section img {
+  width: 90px;
+}
+
+.right-section ul {
+  display: flex;
+  padding: 0;
+  column-gap: 10px;
+}
+
+.right-section ul li {
+  list-style: none;
+  cursor: pointer;
+  border-bottom: 2px black solid;
+  font-size: 1.2rem;
+  transition: border-bottom .4s ease-in-out;
+}
+
+.right-section ul li:hover {
+  border-bottom: 2px white solid;
+}
+
+.pop-bars-cont {
+  display: none;
+}
+
+.pop-ul {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px 30px 30px;
+  row-gap: 20px;
+  color: white;
+  position: fixed;
+  right: 0;
+  z-index: 7;
+  top: 70px;
+  left: 0;
+  transform: translateY(-100%);
+  transition: transform .4s ease-in-out;
+  background-color: black;
+}
+
+.pop-ul li {
+  list-style: none;
+}
+
+
+.notificataion-board-cont {
+  margin-top: 150px;
+  color: white;
+  padding: 0 5%;
+}
+
+.notificataion-board-cont h1 {
+  animation: welcome 3s linear 1;
+}
+
+
+@keyframes welcome {
+  0% {
+    transform: translate(0);
+  }
+
+  25% {
+    transform:  rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+.notificataion-board-cont h1 .wave {
+  animation: wave .4s linear infinite 3s;
+  display: inline-block;
+  z-index: 0;
+}
+
+@keyframes wave {
+  25%{
+    transform: rotate(20deg);
+  }
+}
+
+
+.about-cont, .projects-cont, .tecnologies-cont, .contact-cont, .skills-cont {
+  margin-top: 50px;
+  border-radius: 10px;
+  margin-left: 8%;
+  margin-right: 8%;
+  padding-bottom: 30px;
+  border: 2px solid gainsboro;
+}
+
+.about-cont h1, .projects-cont h1, .tecnologies-cont h1, .contact-cont h1, .skills-cont h1 {
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  margin: 50px 0;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  padding: 20px 8%;
+  column-gap: 30px;
+}
+
+.about-container img {
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: 0px 0px 30px;
+}
+
+.about-dev {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+.about-container span {
+  color: whitesmoke;
+  text-align: justify;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 10px 8%;
+  height: fit-content;
+}
+
+.project-cont {
+  background: radial-gradient(rgb(19, 19, 19), rgb(12, 12, 12));
+  padding: 15px 14px; 
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+.project-cont .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-cont .header img{
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.project-cont span {
+  font-size: .8rem;
+  text-align: justify;
+  display: block;
+  line-height: 18px;
+}
+
+.tecnologies-cont {
+  border: 2px gainsboro solid;
+  margin-left: 8%;
+  margin-right: 8%;
+  border-radius: 10px;
+  padding-bottom: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  /* left: 50%; */
+  /* left: 50%; */
+  cursor: pointer;
+  color: gainsboro;
+  transform: translateY( -50%);
+}
+
+.prev {
+  left : 50px;
+}
+
+.next {
+  right: 50px;
+}
+
+.technologies-cotainer {
+  display: flex;
+  width: 140px;
+  overflow: hidden;
+}
+
+.technology-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+  width: 140px;
+  transition: transform .4s ease-in-out;
+  /* : translateX(-150px); */
+}
+
+.technology-container img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+}
+
+.technology-container span {
+  color: whitesmoke;
+}
+
+.skills-cont {
+  border: 2px solid gainsboro;
+  margin-left:  8%;
+  margin-right:  8%;
+  padding-bottom: 50px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 30px;
+  margin-left:  3%;
+  margin-right:  3%;
+}
+
+.skill {
+  border: 2px solid gainsboro;
+  padding: 30px 30px 65px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+  color: white;
+  border-radius: 10px;
+}
+
+.skill-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.skill-title i {
+  font-size: 1.5rem;
+  z-index: 0;
+}
+
+.skill-title p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-size: 400;
+}
+
+.skill-content {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.733);
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.skill:first-child .skill-title i, .skill:first-child .skill-title p{
+  color: rgb(255, 196, 0);
+}
+
+.skill:first-child .skill-title i {
+  animation: lightdim linear 1s infinite;
+}
+
+@keyframes lightdim {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.skill:nth-child(2) .skill-title i, .skill:nth-child(2) .skill-title p {
+  color: rgb(3, 96, 9);
+}
+
+
+.skill:nth-child(2) .skill-title i {
+  animation: phoneFlip 2s linear infinite;
+}
+
+@keyframes phoneFlip {
+  0% {
+    transform: rotateX(0);
+  }
+
+  25% {
+    transform: rotateY(90deg);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(0);
+  }
+}
+
+.skill:nth-child(3) .skill-title i, .skill:nth-child(3) .skill-title p {
+  color: rgb(9, 112, 146);
+}
+
+.skill:nth-child(3) .skill-title i {
+  animation: settingRotate 1s linear infinite;
+}
+
+@keyframes settingRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+
+  100% {
+    transform: translate(360deg);
+  }
+}
+
+
+
+.skill:last-child .skill-title i, .skill:last-child .skill-title p {
+  color: rgb(255, 196, 0);
+}
+
+.skill:last-child .skill-title i {
+  animation: timeflip linear 1s infinite;
+}
+
+@keyframes timeflip {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform:  rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0%);
+  }
+}
+
+
+.contacts-option-container {
+  display: flex;
+  justify-content: space-between;
+  /* grid-template-columns: 1fr 1fr; */
+  color: whitesmoke;
+  padding: 20px 8%;
+}
+
+.direct-message-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 10px;
+  width: 300px;
+}
+
+.direct-message-cont span {
+  margin-bottom: 20px;
+}
+
+.direct-message-cont Input, .direct-message-cont textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid gainsboro ;
+  outline-color: lightblue;
+  resize: none;
+}
+
+button {
+  padding: 8px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(31, 93, 207);
+  color: whitesmoke;
+}
+
+.media-connection {
+  display: flex;
+  column-gap: 15px;
+}
+
+.media-connection small {
+  font-size: .7rem;
+}
+
+.location, .contact-details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0px;
+}
+
+.detail-container {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  margin-top: 20px;
+}
+
+.location small {
+  margin-top: 15px;
+}
+
+.detail-container img {
+  width: 20px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.222);
+  row-gap: 20px;
+  margin-top: 50px;
+}
+
+footer img {
+  width: 80px;
+  border-radius: 50px;
+  margin-top: -20px;
+}
+
+.foooter-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  row-gap: 10px;
+  padding: 20px 8%;
+}
+
+.foooter-content span {
+  display: block;
+  text-align: center;
+}
+
+@media (min-width: 451px) and (max-width: 900px) {
+    
+  body {
+    font-family: "Roboto", sans-serif;
+    background: radial-gradient(rgb(28, 27, 27), rgb(15, 14, 14));
+    margin: 0;
+    padding: 0 0px 20px 0px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    color: white;
+    align-items: start;
+    padding: 5px 25px;
+  }
+
+  .left-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-section img {
+    width: 75px;
+  }
+
+  .left-section ul {
+    padding: 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .left-section ul li {
+    list-style: none;
+  }
+
+  .right-section {
+    display: flex;
+  }
+
+  .pop-bars-cont {
+    display: flex;
+    font-size: 1.25rem;
+    align-items: center;
+    column-gap: 8px;
+    padding: 10px;
+  }
+
+  .right-section ul {
+    display: flex;
+    padding: 0;
+    column-gap: 10px;
+    flex-direction: column;
+    display: none;
+  }
+
+  .right-section ul li {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .right-section ul li:hover {
+    text-decoration: underline;
+  }
+
+  .about-cont, .projects-cont, .tecnologies-cont, .contact-cont {
+    margin-top: 20px;
+    /* border-bottom: 1px solid gainsboro; */
+    padding: 10px 0;
+  }
+
+  .notificataion-board-cont {
+    margin-top: 150px;
+  }
+
+  .about-cont {
+    margin-top: 30px;
+  }
+
+  .about-cont h1, .projects-cont h1, .tecnologies-cont h1, .contact-cont h1 {
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    margin: 10px 0 15px 0;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 8%;
+    row-gap: 20px;
+    width: 100%;
+  }
+
+  .about-container img {
+    width: 100%;
+    border-radius: 2px;
+    box-shadow: 0px 0px 30px;
+  }
+
+  .about-dev {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+
+  .about-container span {
+    color: whitesmoke;
+    text-align: justify;
+  }
+
+  .projects-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 10px 7%;
+    height: fit-content;
+    /* width: 90%; */
+  }
+
+  .project-cont {
+    background: radial-gradient(rgb(19, 19, 19), rgb(12, 12, 12));
+    padding: 15px 14px; 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+
+  .project-cont .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .project-cont .header img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+
+  .project-cont span {
+    font-size: .99rem;
+    text-align: justify;
+    display: block;
+    line-height: 18px;
+  }
+
+  .tecnologies-cont {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .technologies-cotainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 7%;
+    width: 100px;
+  }
+
+  .technology-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+    width: 100px;
+  }
+
+  .technology-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  .technology-container span {
+    color: whitesmoke;
+    font-size: 1.2rem;
+  }
+  
+
+
+  .prev {
+    left : 20px;
+  }
+
+  .next {
+    right: 20px;
+  }
+    
+  .skills-cont {
+    padding-bottom: 20px;
+  }
+
+  .skills-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .skill-title i {
+    font-size: 1.5rem;
+  }
+
+  .skill-title p {
+    text-align: center;
+  }
+
+  .skill-content {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.733);
+    font-weight: 400;
+    line-height: 25px;
+  }
+
+  .contacts-option-container {
+    display: flex;
+    justify-content: space-between;
+    color: whitesmoke;
+    row-gap: 25px;
+    padding: 20px 8%;
+    flex-direction: column;
+  }
+
+  .direct-message-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 10px;
+    width: 100%;
+  }
+
+  .direct-message-cont span {
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .direct-message-cont Input, .direct-message-cont textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid gainsboro ;
+    outline-color: lightblue;
+    resize: none;
+  }
+
+  button {
+    padding: 8px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(31, 93, 207);
+    color: whitesmoke;
+  }
+
+  .media-connection {
+    display: flex;
+    row-gap: 25px;
+    flex-direction: column;
+  }
+
+  .media-connection small {
+    font-size: .95rem;
+  }
+
+  .location, .contact-details {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .detail-container {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+  }
+
+  .detail-container img {
+    width: 20px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.222);
+    row-gap: 20px;
+    margin-top: 50px;
+  }
+
+  footer img {
+    width: 75px;
+    border-radius: 50px;
+    margin-top: -20px;
+  }
+
+ .top-note {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .foooter-content {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+    
+  body {
+    font-family: "Roboto", sans-serif;
+    background: radial-gradient(rgb(28, 27, 27), rgb(15, 14, 14));
+    margin: 0;
+    padding: 0 0px 20px 0px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    background: rgb(0, 0, 0);
+    color: white;
+    align-items: start;
+    padding: 5px 25px;
+    flex-direction: column;
+    /* position: relative; */
+  }
+
+
+  .left-section img {
+    width: 75px;
+  }
+
+  .right-section {
+    display: flex;
+  }
+
+  .pop-bars-cont {
+    display: flex;
+    font-size: 1.25rem;
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  .right-section ul {
+    display: flex;
+    padding: 0;
+    column-gap: 10px;
+    flex-direction: column;
+    display: none;
+  }
+
+  .right-section ul li {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .right-section ul li:hover {
+    text-decoration: underline;
+  }
+
+  .about-cont, .projects-cont, .tecnologies-cont, .contact-cont, .skills-cont {
+  margin-top: 20px;
+  border-bottom: 2px solid gainsboro;
+  padding: 10px 0;
+  margin-right: 5%;
+  margin-left: 5%;
+  }
+
+  .notificataion-board-cont {
+    margin-top: 80px;
+    padding: 10px 5%;
+  }
+
+  .dev-display-name {
+    display: inline-block;
+  }
+  .pro {
+    margin: 0;
+  }
+
+  .about-cont {
+    margin-top: 20px;
+  }
+
+  .about-cont h1, .projects-cont h1, .tecnologies-cont h1, .contact-cont h1 , .skills-cont h1{
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    margin: 10px 0 15px 0;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 8%;
+    row-gap: 20px;
+    width: 100%;
+  }
+
+  .about-container img {
+    width: 100%;
+    border-radius: 2px;
+    box-shadow: 0px 0px 30px;
+  }
+
+  .about-dev {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+
+  .about-container span {
+    color: whitesmoke;
+    /* text-align: center; */
+  }
+
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 10px 7%;
+    height: fit-content;
+  }
+
+  .project-cont {
+    background: radial-gradient(rgb(19, 19, 19), rgb(12, 12, 12));
+    padding: 15px 14px; 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+
+  .project-cont .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .project-cont .header img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+
+  .project-cont span {
+    font-size: .8rem;
+    text-align: justify;
+    display: block;
+    line-height: 18px;
+  }
+
+  .technologies-cotainer {
+    display: flex;
+    width: 80px;
+    justify-content: space-between;
+    margin: 0 7%;
+  }
+
+  .technology-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+    width: 80px;
+  }
+
+  .technology-container img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+
+  .technology-container span {
+    color: whitesmoke;
+  }
+  
+
+  .prev {
+    left : 20px;
+  }
+
+  .next {
+    right: 20px;
+  }
+    
+  .skills-cont {
+    padding-bottom: 20px;
+  }
+
+  .skills-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .skill-title i {
+    font-size: 1.5rem;
+  }
+
+  .skill-title p {
+    text-align: center;
+  }
+
+  .skill-content {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.733);
+    font-weight: 400;
+    line-height: 25px;
+  }
+
+  .contact-cont {
+    /* border: none; */
+  }
+
+  .contacts-option-container {
+    display: flex;
+    justify-content: space-between;
+    color: whitesmoke;
+    row-gap: 25px;
+    padding: 20px 8%;
+    flex-direction: column;
+  }
+
+  .direct-message-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 10px;
+    width: 100%;
+  }
+
+  .direct-message-cont span {
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .direct-message-cont Input, .direct-message-cont textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid gainsboro ;
+    outline-color: lightblue;
+    resize: none;
+  }
+
+  button {
+    padding: 8px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(31, 93, 207);
+    color: whitesmoke;
+  }
+
+  .media-connection {
+    display: flex;
+    row-gap: 25px;
+    flex-direction: column;
+  }
+
+  .media-connection small {
+    font-size: .7rem;
+  }
+
+  .location, .contact-details {
+    display: flex;
+    flex-direction: column;
+    row-gap: 11px;
+  }
+
+  .location small {
+    margin: 0;
+  }
+
+  .detail-container {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    margin-top: 0;
+  }
+
+  .detail-container img {
+    width: 20px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.222);
+    row-gap: 20px;
+    margin-top: 50px;
+    padding: 0 10px;
+    display: none;
+  }
+
+  footer img {
+    width: 75px;
+    border-radius: 50px;
+  }
+
+  .foooter-content {
+    display: none;
+  }
+
+
+}
+
+.margin-top {
+  margin-top: 20vh;
+}
+
+
+.show {
+  display: flex;
+  transform: translateY(0);
+  color: white;
+}

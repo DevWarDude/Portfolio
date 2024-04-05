@@ -53,11 +53,11 @@ nav {
   cursor: pointer;
   border-bottom: 2px black solid;
   font-size: 1.2rem;
-  transition: border-bottom .4s ease-in-out;
+  transition: transform 1s .5s;
 }
 
 .right-section ul li:hover {
-  border-bottom: 2px white solid;
+  transform: rotate(360deg);
 }
 
 .pop-bars-cont {
@@ -1151,6 +1151,7 @@ footer img {
 .margin-top {
   margin-top: 20vh;
 }
+
 
 
 .show {

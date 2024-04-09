@@ -19,22 +19,20 @@ document.querySelectorAll('.menu, .menu-text').forEach(elem => {
   });
 });
 
-document.querySelectorAll('.home').forEach(elem => {
+document.querySelectorAll('.home, side-home').forEach(elem => {
   elem.addEventListener('click', () => {
-  document.querySelector('.notificataion-board-cont').scrollIntoView()
+  location.reload()
+  })
+});
+
+document.querySelectorAll('.about, side-about').forEach(elem => {
+  elem.addEventListener('click', () => {
+    document.querySelector('.notificataion-board-cont').scrollIntoView()
     popElem.classList.remove('show')
   });
 });
 
-document.querySelectorAll('.about').forEach(elem => {
-  elem.addEventListener('click', () => {
-    document.querySelector('.about-cont').scrollIntoView()
-    popElem.classList.remove('show')
-
-  });
-});
-
-document.querySelectorAll('.projects').forEach(elem => {
+document.querySelectorAll('.projects, .side-projects').forEach(elem => {
   elem.addEventListener('click', () => {
     document.querySelector('.projects-cont').scrollIntoView()
     popElem.classList.remove('show')
@@ -42,7 +40,7 @@ document.querySelectorAll('.projects').forEach(elem => {
   });
 });
 
-document.querySelectorAll('.technologies').forEach(elem => {
+document.querySelectorAll('.tech, .side-tech').forEach(elem => {
   elem.addEventListener('click', () => {
     document.querySelector('.tecnologies-cont').scrollIntoView()
     popElem.classList.remove('show')
@@ -50,7 +48,7 @@ document.querySelectorAll('.technologies').forEach(elem => {
   });
 });
 
-document.querySelectorAll('.skills').forEach(elem => {
+document.querySelectorAll('.skills, .side-skills').forEach(elem => {
   elem.addEventListener('click', () => {
     document.querySelector('.skills-cont').scrollIntoView()
     popElem.classList.remove('show')
@@ -58,7 +56,7 @@ document.querySelectorAll('.skills').forEach(elem => {
   });
 });
 
-document.querySelectorAll('.contact').forEach(elem => {
+document.querySelectorAll('.contacts, .side-contacts').forEach(elem => {
   elem.addEventListener('click', () => {
     document.querySelector('.contact-cont').scrollIntoView();
   });
@@ -74,6 +72,11 @@ document.querySelectorAll('ul, .left-section, .contact-cont, .tecnologies-cont, 
 window.addEventListener('scroll', () => {
   popElem.classList.remove('show');
   menuTxt.innerText = 'Menu';
+  document.querySelector('.pop-slide-bar').style.visibility = 'hidden' 
+  document.querySelectorAll('.pop-slide-bar ul li')
+    .forEach(elem => {
+      elem.classList.remove('show')
+    });
 });
 
 document.querySelector('button').addEventListener('click', (event) => {
@@ -106,5 +109,27 @@ document.querySelector('button').addEventListener('click', (event) => {
     document.querySelector('.email').value = ''
     document.querySelector('.message').value = ''
   }
- 
 })
+
+
+document.querySelectorAll('.side-menu-pop')
+  .forEach(elem => {
+    elem.addEventListener('click', () => {
+      document.querySelector('.pop-slide-bar').style.visibility = 'visible' 
+      document.querySelectorAll('.pop-slide-bar ul li')
+        .forEach(elem => {
+          elem.classList.add('show')
+        });
+    });
+  });
+
+document.querySelectorAll('.close-side')
+  .forEach(elem => {
+    elem.addEventListener('click', () => {
+      document.querySelector('.pop-slide-bar').style.visibility = 'hidden' 
+      document.querySelectorAll('.pop-slide-bar ul li')
+        .forEach(elem => {
+          elem.classList.remove('show')
+        });
+    });
+  });

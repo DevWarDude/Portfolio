@@ -6,9 +6,9 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background: radial-gradient(rgb(28, 27, 27), rgb(15, 14, 14));
+  background: radial-gradient(rgb(20, 20, 20), rgb(20, 20, 20));
   margin: 0;
-  padding: 0 0px 20px 0px;
+  padding: 0px 0px 0px 0px;
 }
 
 a {
@@ -19,16 +19,16 @@ a {
 header {
   display: flex;
   flex-direction: column;
-  background: black;
+  background: rgb(15, 15, 15);
   color: white;
   align-items: start;
-  padding: 5px 25px;
+  padding: 15px 25px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 30;
   right: 0;
-  /* height: fit-content; */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, .1);
 }
 
 nav {
@@ -38,26 +38,19 @@ nav {
   width: 100%;
 }
 
-.left-section img {
-  width: 90px;
+.left-section a h2 {
+  color: wheat;
 }
 
-.right-section ul {
-  display: flex;
-  padding: 0;
-  column-gap: 10px;
-}
-
-.right-section ul li {
-  list-style: none;
+.right-section span, .right-section i {
+  font-size: 1.5rem;
+  color: wheat;
   cursor: pointer;
-  border-bottom: 2px black solid;
-  font-size: 1.2rem;
-  transition: transform 1s .5s;
 }
 
-.right-section ul li:hover {
-  transform: rotate(360deg);
+.right-section span {
+  font-weight: 500;
+
 }
 
 .pop-bars-cont {
@@ -75,13 +68,15 @@ nav {
   z-index: 7;
   top: 70px;
   left: 0;
+  opacity: 0;
   transform: translateY(-100%);
-  transition: transform .4s ease-in-out;
+  transition: transform .81s ease-in-out, opacity .81s ease-in-out;
   background-color: black;
 }
 
 .pop-ul li {
   list-style: none;
+  cursor: pointer;
 }
 
 
@@ -126,6 +121,97 @@ nav {
   }
 }
 
+.pop-slide-bar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 220px;
+  z-index: 200;
+  /* padding: 20px 10px; */
+  background: radial-gradient(rgb(20, 20, 20), rgb(20, 20, 20));
+  display: flex;
+  flex-direction: column;
+  row-gap: 0;
+  visibility: hidden;
+  transition:  visibility .7s ease-in-out;
+}
+
+.slide-bar-top {
+  height: 100px;
+  background: rgb(15, 15, 15);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  column-gap: 8px;
+  border-left: 1px solid rgba(245, 222, 179, 0.2);
+}
+
+.slide-bar-top span {
+  margin-right: 25px;
+}
+
+.slide-bar-top i , .slide-bar-top span {
+  font-size: 1.5rem;
+  color: wheat;
+  cursor: pointer;
+}
+
+.pop-slide-bar ul {
+  padding: 0;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  border-left: 1px solid rgba(245, 222, 179, 0.2);
+  /* border-top: 1px solid wheat; */
+  flex: 1;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.pop-slide-bar ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  cursor: pointer;
+  padding: 15px 30px 0px 20px;
+  transition: transform .7s ease-in-out;
+}
+
+.pop-slide-bar ul li img {
+  width: 25px;
+  color: white;
+}
+
+.pop-slide-bar ul li  span {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.side-home {
+  transform: translateX(200px);
+}
+
+.side-about {
+  transform: translateX(250px);
+}
+
+.side-skills {
+  transform: translateX(300px);
+}
+
+.side-tech {
+  transform: translateX(350px);
+}
+
+.side-projects {
+  transform: translateX(400px);
+}
+
+.side-contacts {
+  transform: translateX(450px);
+}
 
 .about-cont, .projects-cont, .tecnologies-cont, .contact-cont, .skills-cont {
   margin-top: 50px;
@@ -139,8 +225,8 @@ nav {
 .about-cont h1, .projects-cont h1, .tecnologies-cont h1, .contact-cont h1, .skills-cont h1 {
   width: 100%;
   text-align: center;
-  color: whitesmoke;
   margin: 50px 0;
+  color: rgb(240, 231, 215);
 }
 
 .about-container {
@@ -175,8 +261,16 @@ nav {
   height: fit-content;
 }
 
+/* .projects-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+
 .project-cont {
-  background: radial-gradient(rgb(19, 19, 19), rgb(12, 12, 12));
+  /* background: radial-gradient(rgb(19, 19, 19), rgb(12, 12, 12)); */
+  background-color: white;
   padding: 15px 14px; 
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
@@ -204,6 +298,100 @@ nav {
   text-align: justify;
   display: block;
   line-height: 18px;
+}
+
+
+.services-cont {
+  display: flex;
+  padding: 0px 4%;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.service {
+  object-fit: cover;
+  height: 250px;
+  width: 220px;
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+}
+.yabatech {
+  background: url('../Images/school.png');
+}
+
+.fox-shop {
+  background: url('../Images/eccomerce.png');
+}
+
+.lautech {
+  background: url('../Images/school2.png');
+}
+
+.service-content-cont {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+  background-color: rgba(20, 20, 20, 0.7);
+}
+
+.service-content {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  row-gap: 15px;
+}
+
+.service-content h1 {
+  font-size: 1.25rem;
+  text-align: start;
+  color: whitesmoke;
+  margin: 0;
+  transform: translateY(115px);
+  transition: transform .6s ease-in-out
+}
+
+.service-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  font-weight: 400;
+  font-size: .9rem;
+  transition: transform .6s ease-in-out, opacity .6s ease-in-out;
+  line-height: 20px;
+  transform: translateY(80px);
+  opacity: 0;
+  color: rgba(90, 90, 90, 0.7);
+}
+
+.service-options {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  color: rgb(241, 172, 60);
+  transform: translateY(-8px);
+}
+
+.service-options span, .service-options i {
+  font-weight: 600;
+}
+
+.service:hover .service-description {
+  transform: translateY(0px);
+  opacity: 1;
+  color: white;
+  text-align: unset;
+}
+
+.service:hover .service-content h1 {
+  transform: translateY(0px);
 }
 
 .tecnologies-cont {
@@ -281,8 +469,7 @@ nav {
 }
 
 .skill {
-  border: 2px solid gainsboro;
-  padding: 30px 30px 65px 30px;
+  /* border: 2px solid gainsboro; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -291,11 +478,22 @@ nav {
   border-radius: 10px;
 }
 
+.skill-blur {
+  background-color: rgba(20, 20, 20, 0.7);
+  padding: 30px 30px 65px 30px;
+  border-radius: 10px;
+  border: 2px solid gainsboro;
+  height: 100%;
+}
+
 .skill-title {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 10px;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .skill-title i {
@@ -311,7 +509,7 @@ nav {
 
 .skill-content {
   text-align: center;
-  color: rgba(255, 255, 255, 0.733);
+  color: rgba(255, 255, 255);
   font-weight: 400;
   line-height: 25px;
 }
@@ -340,7 +538,7 @@ nav {
 
 
 .skill:nth-child(2) .skill-title i, .skill:nth-child(2) .skill-title p {
-  color: rgb(3, 96, 9);
+  color: rgb(19, 170, 29);
 }
 
 
@@ -367,7 +565,7 @@ nav {
 }
 
 .skill:nth-child(3) .skill-title i, .skill:nth-child(3) .skill-title p {
-  color: rgb(9, 112, 146);
+  color: rgb(21, 156, 201);
 }
 
 .skill:nth-child(3) .skill-title i {
@@ -420,6 +618,24 @@ nav {
     transform: rotate(0%);
   }
 }
+
+
+.problem-solver {
+  background: url(../Images/problem-solve.png);
+}
+
+.responsive-design {
+  background: url(../Images/responsive.png);
+}
+
+.performance {
+  background: url(../Images/Performance-Optimization2.png);
+}
+
+.time {
+  background: url(../Images/time-manag.png);
+}
+
 
 
 .contacts-option-container {
@@ -563,6 +779,10 @@ footer img {
     display: flex;
   }
 
+  .side-menu-pop {
+    display: none;
+  }
+
   .pop-bars-cont {
     display: flex;
     font-size: 1.25rem;
@@ -588,14 +808,42 @@ footer img {
     text-decoration: underline;
   }
 
+  .pop-ul {
+    padding: 0;
+    margin-top: 7px;
+    row-gap: 12px;
+  }
+
+  .pop-ul li {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    padding: 0px 0 0 25px;
+  }
+
+  .pop-ul li:nth-child(6) {
+    padding-bottom: 20px;
+  }
+
+  .pop-ul li span {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .pop-ul li img {
+    width: 25px;
+  }
+
   .about-cont, .projects-cont, .tecnologies-cont, .contact-cont {
     margin-top: 20px;
     /* border-bottom: 1px solid gainsboro; */
     padding: 10px 0;
   }
 
+  
+
   .notificataion-board-cont {
-    margin-top: 150px;
+    margin-top: 110px;
   }
 
   .about-cont {
@@ -639,45 +887,48 @@ footer img {
     flex-direction: column;
     align-items: center;
   }
-
-  .projects-container {
+  .services-cont {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
-    padding: 10px 7%;
-    height: fit-content;
-    /* width: 90%; */
-  }
-
-  .project-cont {
-    background: radial-gradient(rgb(19, 19, 19), rgb(12, 12, 12));
-    padding: 15px 14px; 
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 25px;
-  }
-
-  .project-cont .header {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    padding: 40px 3%;
+    gap: 30px;
   }
 
-  .project-cont .header img{
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    border-radius: 20px;
+  .service {
+    object-fit: cover;
+    height: 300px;
+    width: 280px;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .service-content-cont {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    background-color: rgba(20, 20, 20, 0.7);
   }
 
-  .project-cont span {
-    font-size: .99rem;
-    text-align: justify;
-    display: block;
-    line-height: 18px;
+  .service-content {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    row-gap: 15px;
+  }
+
+  .service-content h1 {
+    font-size: 1.25rem;
+    text-align: start;
+    color: whitesmoke;
+    margin: 0;
+    transform: translateY(118px);
+    transition: transform .6s ease-in-out
   }
 
   .tecnologies-cont {
@@ -711,8 +962,6 @@ footer img {
     color: whitesmoke;
     font-size: 1.2rem;
   }
-  
-
 
   .prev {
     left : 20px;
@@ -790,7 +1039,7 @@ footer img {
 
   .media-connection {
     display: flex;
-    row-gap: 25px;
+    row-gap: 15px;
     flex-direction: column;
   }
 
@@ -801,13 +1050,14 @@ footer img {
   .location, .contact-details {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 0px;
   }
 
   .detail-container {
     display: flex;
     align-items: center;
     column-gap: 5px;
+    row-gap: 0;
   }
 
   .detail-container img {
@@ -893,6 +1143,36 @@ footer img {
     text-decoration: underline;
   }
 
+  .side-menu-pop {
+    display: none;
+  }
+
+  .pop-ul {
+    padding: 0;
+    margin-top: 7px;
+    row-gap: 12px;
+  }
+
+  .pop-ul li {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    padding: 0px 0 0 25px;
+  }
+
+  .pop-ul li:nth-child(6) {
+    padding-bottom: 20px;
+  }
+
+  .pop-ul li span {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .pop-ul li img {
+    width: 25px;
+  }
+
   .about-cont, .projects-cont, .tecnologies-cont, .contact-cont, .skills-cont {
   margin-top: 20px;
   border-bottom: 2px solid gainsboro;
@@ -902,7 +1182,7 @@ footer img {
   }
 
   .notificataion-board-cont {
-    margin-top: 80px;
+    margin-top: 60px;
     padding: 10px 5%;
   }
 
@@ -946,7 +1226,6 @@ footer img {
 
   .about-container span {
     color: whitesmoke;
-    /* text-align: center; */
   }
 
   .projects-container {
@@ -987,6 +1266,51 @@ footer img {
     display: block;
     line-height: 18px;
   }
+
+  .services-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 3%;
+    gap: 30px;
+  }
+
+  .service {
+    object-fit: cover;
+    height: 250px;
+    width: 220px;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .service-content-cont {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    background-color: rgba(20, 20, 20, 0.7);
+  }
+
+  .service-content {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    row-gap: 15px;
+  }
+
+  .service-content h1 {
+    font-size: 1.25rem;
+    text-align: start;
+    color: whitesmoke;
+    margin: 0;
+    transform: translateY(118px);
+    transition: transform .6s ease-in-out
+  }
+
 
   .technologies-cotainer {
     display: flex;
@@ -1153,9 +1477,9 @@ footer img {
 }
 
 
-
 .show {
   display: flex;
   transform: translateY(0);
   color: white;
+  opacity: 1;
 }

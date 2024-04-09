@@ -375,12 +375,12 @@ nav {
   display: flex;
   align-items: center;
   column-gap: 5px;
-  color: rgb(241, 172, 60);
   transform: translateY(-8px);
 }
 
-.service-options span, .service-options i {
+.service-options a span, .service-options a i {
   font-weight: 600;
+  color: rgb(241, 172, 60);
 }
 
 .service:hover .service-description {
@@ -853,7 +853,7 @@ footer img {
   .about-cont h1, .projects-cont h1, .tecnologies-cont h1, .contact-cont h1 {
     width: 100%;
     text-align: center;
-    color: whitesmoke;
+    color: rgb(240, 231, 215);
     margin: 10px 0 15px 0;
   }
 
@@ -1103,7 +1103,7 @@ footer img {
     display: flex;
     justify-content: space-between;
     background: rgb(0, 0, 0);
-    color: white;
+    color: whitesmoke;
     align-items: start;
     padding: 5px 25px;
     flex-direction: column;
@@ -1111,12 +1111,18 @@ footer img {
   }
 
 
-  .left-section img {
-    width: 75px;
+  .left-section a h2 {
+    color: whitesmoke;
   }
 
   .right-section {
     display: flex;
+    color: white;
+  }
+
+  .pop-bars-cont span, .pop-bars-cont i {
+    display: flex;
+    color: white;
   }
 
   .pop-bars-cont {
@@ -1200,7 +1206,7 @@ footer img {
   .about-cont h1, .projects-cont h1, .tecnologies-cont h1, .contact-cont h1 , .skills-cont h1{
     width: 100%;
     text-align: center;
-    color: whitesmoke;
+    color: rgb(240, 231, 215);
     margin: 10px 0 15px 0;
   }
 

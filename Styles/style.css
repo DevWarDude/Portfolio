@@ -318,15 +318,15 @@ nav {
   color: white;
 }
 .yabatech {
-  background: url('../Images/school.png');
+  background: url('../Images/school.jpg');
 }
 
 .fox-shop {
-  background: url('../Images/eccomerce.png');
+  background: url('../Images/eccomerce.jpg');
 }
 
 .lautech {
-  background: url('../Images/school2.png');
+  background: url('../Images/school2.jpg');
 }
 
 .service-content-cont {
@@ -621,19 +621,19 @@ nav {
 
 
 .problem-solver {
-  background: url(../Images/problem-solve.png);
+  background: url("../Images/problem-solve.jpg");
 }
 
 .responsive-design {
-  background: url(../Images/responsive.png);
+  background: url("../Images/responsive.jpg");
 }
 
 .performance {
-  background: url(../Images/Performance-Optimization2.png);
+  background: url("../Images/Performance-Optimization2.jpg");
 }
 
 .time {
-  background: url(../Images/time-manag.png);
+  background: url('../Images/time-manag.jpg');
 }
 
 

@@ -8,7 +8,7 @@ body {
   font-family: "Roboto", sans-serif;
   background: radial-gradient(rgb(20, 20, 20), rgb(20, 20, 20));
   margin: 0;
-  padding: 0px 0px 0px 0px;
+  padding: 0px;
 }
 
 a {
@@ -134,7 +134,7 @@ nav {
   flex-direction: column;
   row-gap: 0;
   visibility: hidden;
-  transition:  visibility .7s ease-in-out;
+  transition:  visibility .5s ease-in-out;
 }
 
 .slide-bar-top {
@@ -176,7 +176,11 @@ nav {
   column-gap: 6px;
   cursor: pointer;
   padding: 15px 30px 0px 20px;
-  transition: transform .7s ease-in-out;
+  transition: transform .5s ease-in-out;
+}
+
+.pop-slide-bar ul li:hover span{
+  color: wheat;
 }
 
 .pop-slide-bar ul li img {
@@ -187,6 +191,7 @@ nav {
 .pop-slide-bar ul li  span {
   font-weight: 600;
   font-size: 1.2rem;
+  transition: .3s color;
 }
 
 .side-home {
@@ -484,6 +489,7 @@ nav {
   border-radius: 10px;
   border: 2px solid gainsboro;
   height: 100%;
+  width: 100%;
 }
 
 .skill-title {
@@ -742,7 +748,7 @@ footer img {
     font-family: "Roboto", sans-serif;
     background: radial-gradient(rgb(28, 27, 27), rgb(15, 14, 14));
     margin: 0;
-    padding: 0 0px 20px 0px;
+    padding: 0 0px 0px 0px;
   }
 
   header {
